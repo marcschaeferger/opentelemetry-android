@@ -18,9 +18,10 @@ plugins {
     id("org.jetbrains.kotlinx.kover")
 }
 
-extra["java_version"] = JavaVersion.VERSION_1_8
-extra["jvm_target"] = JvmTarget.JVM_1_8
-extra["kotlin_min_supported_version"] = KotlinVersion.KOTLIN_1_8
+// Updated baseline to Java 21 (LTS) / Kotlin 2.2 per request to remove 1.9 deprecation warnings
+extra["java_version"] = JavaVersion.VERSION_21
+extra["jvm_target"] = JvmTarget.JVM_21
+extra["kotlin_min_supported_version"] = KotlinVersion.KOTLIN_2_2
 
 allprojects {
     repositories {
